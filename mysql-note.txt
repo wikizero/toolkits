@@ -19,3 +19,5 @@ mysql导出数据库所有表结构以及数据
 mysqldump -uroot -p -d dbname >db.sql;
 mysql导出数据库某个表结构以及数据
 mysqldump -uroot -p dbname tablename > db.sql
+
+导入数据：source info.sql；
