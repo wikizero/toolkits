@@ -1,0 +1,21 @@
+set character_set_client = utf8;
+
+set character_set_server = utf8;
+
+set character_set_connection = utf8;
+
+set character_set_database = utf8;
+
+set character_set_results = utf8;
+
+set collation_connection = utf8_general_ci;
+
+set collation_database = utf8_general_ci;
+
+set collation_server = utf8_general_ci;
+
+
+mysql导出数据库所有表结构以及数据
+mysqldump -uroot -p -d dbname >db.sql;
+mysql导出数据库某个表结构以及数据
+mysqldump -uroot -p dbname tablename > db.sql
