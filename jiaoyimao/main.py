@@ -14,12 +14,12 @@ def run_spider():
     os.system('scrapy crawl world')
 
 
-@sched.scheduled_job('interval', minutes=1, id='database_backup')
-def db_backup():
-    info = '\nDatabase_backup is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open('schedule.out', 'a+') as fp:
-        fp.write(info)	
-    os.comand('mysqldump -uroot -proot world info > ../info.sql')
+#@sched.scheduled_job('interval', minutes=1, id='database_backup')
+#def db_backup():
+#    info = '\nDatabase_backup is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#    with open('schedule.out', 'a+') as fp:
+#        fp.write(info)	
+#    os.comand('mysqldump -uroot -proot world info > ../info.sql')
 # 每隔5秒运行一次my_job1
 # sched.add_job(run_spider, 'interval', minutes=3, id='Spider_jiaoyimao') # seconds
 
