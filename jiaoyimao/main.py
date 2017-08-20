@@ -6,9 +6,9 @@ import datetime
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=1, id='Spider_jiaoyimao')
+@sched.scheduled_job('interval', minutes=5, id='Spider_jiaoyimao')
 def run_spider():
-	# os.system('scrapy crawl world')
+	os.system('scrapy crawl world')
     print 'My spider is running, Now is %s' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
