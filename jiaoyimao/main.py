@@ -6,11 +6,11 @@ import datetime
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=5, id='Spider_jiaoyimao')
+@sched.scheduled_job('interval', minutes=10, id='Spider_jiaoyimao')
 def run_spider():
-    info = '\nMy spider is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open('schedule.out', 'a+') as fp:
-		fp.write(info)
+    #info = '\nMy spider is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #with open('schedule.out', 'a+') as fp:
+    #		fp.write(info)
     os.system('scrapy crawl world')
 
 
