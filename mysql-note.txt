@@ -22,3 +22,6 @@ mysqldump -uroot -p dbname tablename > db.sql
 
 导入数据：source info.sql；
 或：mysql -uroot -p world < info.sql
+
+pip freeze > xx.txt
+pip install -r xx.txt
