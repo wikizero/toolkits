@@ -13,6 +13,7 @@ def run_spider():
     #with open('schedule.out', 'a+') as fp:
     #        fp.write(info)
     os.system('scrapy crawl world')
+    os.system('scrapy crawl sword')
 
 
 #@sched.scheduled_job('interval', minutes=1, id='database_backup')
