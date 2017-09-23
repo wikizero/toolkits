@@ -19,7 +19,7 @@ https://www.zhihu.com/question/19794855/answer/129270643
 好用的Python库：
 wget  下载文件
 yagmail  发邮件
-psutil  监控系统以及进程管理 快点放假就地方叫大煞风景
+psutil  监控系统以及进程管理 
 
 Clipboard History
 

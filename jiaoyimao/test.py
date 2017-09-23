@@ -1,12 +1,6 @@
 # coding:utf-8
-import re
+import os
 
-ss = '''
-abc aaaaa
-123 abc 444
-'''
+os.system('scrapy crawl sword')
 
-def func(s):
-	return  s.group()*2
 
-print re.sub(r'abc(.*)',func, ss)

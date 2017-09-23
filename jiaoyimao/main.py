@@ -6,11 +6,12 @@ import datetime
 
 sched = BlockingScheduler()
 
+
 @sched.scheduled_job('interval', minutes=10, id='Spider_jiaoyimao')
 def run_spider():
     #info = '\nMy spider is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     #with open('schedule.out', 'a+') as fp:
-    #		fp.write(info)
+    #        fp.write(info)
     os.system('scrapy crawl world')
 
 
@@ -18,7 +19,7 @@ def run_spider():
 #def db_backup():
 #    info = '\nDatabase_backup is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 #    with open('schedule.out', 'a+') as fp:
-#        fp.write(info)	
+#        fp.write(info)    
 #    os.comand('mysqldump -uroot -proot world info > ../info.sql')
 # 每隔5秒运行一次my_job1
 # sched.add_job(run_spider, 'interval', minutes=3, id='Spider_jiaoyimao') # seconds
