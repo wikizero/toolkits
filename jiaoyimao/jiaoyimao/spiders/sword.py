@@ -74,14 +74,12 @@ class WorldSpider(scrapy.Spider):
                 status = 'sold-out'
             else:
                 status = 'unknow'
-        print status
         
         # create info
-        print title, price, power, desc
         info = SwordInfo.select().where(SwordInfo.info_id == time_str)
         if info:
             SwordInfo.update(title=title, price=price, level=int(level), desc=desc, power=power, country=country,
-                        status=status, sold_date=datetime.datetime.now()).where(Info.info_id == time_stamp).execute()
+                        status=status, sold_date=datetime.datetime.now()).where(SwordInfo.info_id == time_stamp).execute()
         else:
             SwordInfo.create(info_id=time_str, url=url, release_date=release_time, title=title, price=price,
                         sold_times=sell_times, power=power, account_type=account_type, level=int(level), bind_info=bind,

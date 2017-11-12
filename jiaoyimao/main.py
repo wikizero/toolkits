@@ -7,7 +7,7 @@ import datetime
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job('interval', minutes=10, id='Spider_world')
+@sched.scheduled_job('interval', minutes=15, id='Spider_world')
 def run_spider():
     #info = '\nMy spider is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     #with open('schedule.out', 'a+') as fp:
@@ -27,7 +27,7 @@ def run_spider():
 
 # 每隔5秒运行一次my_job2
 # sched.add_job(my_job2,'cron',second='*/5',id='my_job2')
-@sched.scheduled_job('interval', minutes=5, id='Spider_sword')
+@sched.scheduled_job('interval', minutes=30, id='Spider_sword')
 def run_spider():
     #info = '\nMy spider is running, Now is %s \n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     #with open('schedule.out', 'a+') as fp:
