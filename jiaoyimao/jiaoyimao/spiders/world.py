@@ -19,6 +19,9 @@ class WorldSpider(scrapy.Spider):
             if link:
                 yield Request(link, callback=self.parse_good, dont_filter=True)
                 
+        # 每5分钟抓取一次，只需抓取最新一页数据即可(2018/1/20)
+        return False
+        
         # 下一页 页面捉取
         for i in response.css('.page-btn'):
             text = i.xpath('text()').extract_first(default='').strip()
@@ -49,6 +52,10 @@ class WorldSpider(scrapy.Spider):
         bind = bind_info.xpath('following::text()').extract_first(default='').strip()  # bind_info varchar
         description_info = goods_info.css('.goods-properties .row:nth-child(5) span')
         desc = description_info.xpath('following::text()').extract_first(default='').strip()  # desc varchar
+ 
+        # 小于20级忽略掉(2018/1/20)
+        if int(level) <= 20:
+            return False  
 
         # img info
         images = response.css('.slider-items li')
