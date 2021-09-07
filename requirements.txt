@@ -24,7 +24,7 @@ paramiko==2.2.1
 parsel==1.2.0
 pdfkit==0.6.1
 peewee==2.10.1
-Pillow==4.2.1
+Pillow==8.3.2
 pyasn1==0.3.2
 pyasn1-modules==0.0.11
 pycparser==2.18
