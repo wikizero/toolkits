@@ -20,7 +20,7 @@ ipaddress==1.0.18
 lxml==3.8.0
 ncmbot==0.1.6
 olefile==0.44
-paramiko==2.2.1
+paramiko==2.10.1
 parsel==1.2.0
 pdfkit==0.6.1
 peewee==2.10.1
